@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package quadratic_calc;
+
+service quadratic_Calculator {
+    rpc Compute(ComputeRequest) returns (ComputeResponse);
+}
+
+message ComputeRequest {
+    float num1 = 1;
+    float num2 = 2;
+    float num3 = 3;
+}
+
+message ComputeResponse {
+    string result = 1;
+}
